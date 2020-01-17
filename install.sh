@@ -3,6 +3,9 @@ ln -sf .vim/vimrc ../.vimrc
 
 cd bundle
 
+# binary packages
+sudo apt-get install exuberant-ctags cscope cmake python-dev
+
 git clone https://github.com/gmarik/vundle.git 
 
 git clone https://github.com/vim-scripts/bufexplorer.zip.git
@@ -27,7 +30,13 @@ git clone git://git.wincent.com/command-t.git
 git clone https://github.com/vim-scripts/The-NERD-tree.git
 git clone https://github.com/rstacruz/sparkup.git
 git clone https://github.com/majutsushi/tagbar.git
+
 git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+./install.sh --clang-completer
+cd -
+
 git clone https://github.com/vim-scripts/Markdown.git
 git clone https://github.com/rust-lang/rust.vim.git
 git clone https://github.com/vim-airline/vim-airline-themes.git
