@@ -5,6 +5,7 @@ cd bundle
 
 # binary packages
 sudo apt-get install -y exuberant-ctags cscope cmake python-dev python3.6-dev
+sudo apt-get install silversearcher-ag
 
 git clone https://github.com/gmarik/vundle.git 
 
