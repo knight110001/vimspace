@@ -41,8 +41,10 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'racer-rust/vim-racer'
 Plugin 'rust-lang/rust.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'dyng/ctrlsf.vim'
 "Plugin 'wsdjeg/FlyGrep.vim'
 Plugin 'gregsexton/gitv'
+Plugin 'terryma/vim-multiple-cursors'
 
 " http://www.vim.org/scripts/index.php
 " vim-scripts repos, {format} = {plugin name}
@@ -523,5 +525,18 @@ nmap <leader>+ <Plug>AirlineSelectNextTab
 "" 这里填写的就是我们在1.2.1中让你记住的目录
 "let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/"
 
-" ag seting
+" ag settings
+nnoremap <Leader>a :Ack<Space>
+map <s-a> :Ack<Space>
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" CtrlSF settings
+nnoremap <Leader>f :CtrlSF<Space>
+nmap     <S-F>f <Plug>CtrlSFPrompt
+vmap     <S-F>f <Plug>CtrlSFVwordPath
+vmap     <S-F>F <Plug>CtrlSFVwordExec
+nmap     <S-F>n <Plug>CtrlSFCwordPath
+nmap     <S-F>p <Plug>CtrlSFPwordPath
+nnoremap <S-F>o :CtrlSFOpen<CR>
+nnoremap <S-F>t :CtrlSFToggle<CR>
+inoremap <S-F>t <Esc>:CtrlSFToggle<CR>
