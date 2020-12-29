@@ -40,11 +40,17 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'racer-rust/vim-racer'
 Plugin 'rust-lang/rust.vim'
+" Global search
 Plugin 'mileszs/ack.vim'
 Plugin 'dyng/ctrlsf.vim'
 "Plugin 'wsdjeg/FlyGrep.vim'
+" Gitk replication
 Plugin 'gregsexton/gitv'
 Plugin 'terryma/vim-multiple-cursors'
+" Markdown & preview
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'suan/vim-instant-markdown'
 
 " http://www.vim.org/scripts/index.php
 " vim-scripts repos, {format} = {plugin name}
@@ -531,6 +537,7 @@ map <s-a> :Ack<Space>
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " CtrlSF settings
+"let g:ctrlsf_default_view_mode = 'compact'
 nnoremap <Leader>f :CtrlSF<Space>
 nmap     <S-F>f <Plug>CtrlSFPrompt
 vmap     <S-F>f <Plug>CtrlSFVwordPath
@@ -540,3 +547,7 @@ nmap     <S-F>p <Plug>CtrlSFPwordPath
 nnoremap <S-F>o :CtrlSFOpen<CR>
 nnoremap <S-F>t :CtrlSFToggle<CR>
 inoremap <S-F>t <Esc>:CtrlSFToggle<CR>
+
+" Markdown preview
+let g:instant_markdown_autostart = 0
+map <F5> :InstantMarkdownPreview<CR>

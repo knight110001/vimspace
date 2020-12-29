@@ -7,6 +7,13 @@ cd bundle
 sudo apt-get install -y exuberant-ctags cscope cmake python-dev python3.6-dev
 sudo apt-get install silversearcher-ag
 
+# markdown preview
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
+
+sudo npm -g install instant-markdown-d
+
 git clone https://github.com/gmarik/vundle.git 
 
 git clone https://github.com/vim-scripts/bufexplorer.zip.git
