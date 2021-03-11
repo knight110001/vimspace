@@ -62,4 +62,4 @@ git clone https://github.com/vim-scripts/youdao.dict.git
 git clone https://github.com/vim-scripts/Tabular.git
 git clone https://github.com/dgryski/vim-godef.git
 git clone https://github.com/icymind/NeoSolarized.git
-
+git clone https://github.com/udalov/kotlin-vim.git

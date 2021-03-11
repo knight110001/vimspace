@@ -51,6 +51,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'suan/vim-instant-markdown'
+Plugin 'udalov/kotlin-vim'
 
 " http://www.vim.org/scripts/index.php
 " vim-scripts repos, {format} = {plugin name}
