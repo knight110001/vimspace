@@ -43,7 +43,7 @@ Plugin 'rust-lang/rust.vim'
 " Global search
 Plugin 'mileszs/ack.vim'
 Plugin 'dyng/ctrlsf.vim'
-"Plugin 'wsdjeg/FlyGrep.vim'
+Plugin 'wsdjeg/FlyGrep.vim'
 " Gitk replication
 Plugin 'gregsexton/gitv'
 Plugin 'terryma/vim-multiple-cursors'
@@ -548,6 +548,10 @@ nmap     <S-F>p <Plug>CtrlSFPwordPath
 nnoremap <S-F>o :CtrlSFOpen<CR>
 nnoremap <S-F>t :CtrlSFToggle<CR>
 inoremap <S-F>t <Esc>:CtrlSFToggle<CR>
+
+" FlyGrep settings
+nnoremap <Space>f/ :FlyGrep<cr>
+let g:spacevim_data_dir = '~/.cache/SpaceVim'
 
 " Markdown preview
 let g:instant_markdown_autostart = 0
