@@ -4,7 +4,7 @@ ln -sf .vim/vimrc ../.vimrc
 cd bundle
 
 # binary packages
-sudo apt-get install -y exuberant-ctags cscope cmake python-dev python3.6-dev
+sudo apt-get install -y exuberant-ctags cscope cmake python-dev python3.6-dev python3.8-dev
 
 # FlyGrep means grep on the fly which depends on ag, rg, ack, pt and grep.
 # In Linux, flygrep uses grep by default, you can install one of tools
@@ -12,12 +12,12 @@ sudo apt-get install -y exuberant-ctags cscope cmake python-dev python3.6-dev
 #   ripgrep(rg)
 #   the_silver_searcher(ag)
 #   the_platinum_searcher(pt)
-sudo apt-get install silversearcher-ag
+sudo apt-get install -y silversearcher-ag
 
 # markdown preview
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
-sudo apt-get install nodejs
+sudo apt-get install -y nodejs
 
 sudo npm -g install instant-markdown-d
 
@@ -74,10 +74,12 @@ git clone https://github.com/vim-scripts/gitv.git
 git clone https://github.com/google/vroom.git
 
 git clone https://github.com/Valloric/YouCompleteMe.git
+if test -d YouCompleteMe; then
 cd YouCompleteMe
 git submodule update --init --recursive
 ./install.sh --clang-completer
 cd -
+fi
 
 # text format tool
 git clone https://github.com/vim-scripts/Tabular.git
