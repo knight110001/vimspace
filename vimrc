@@ -204,7 +204,7 @@ map <F7> :copen<cr>
 map <leader>cf :botright cwindow<cr>
 
 " NERDTree open
-map <F10> :NERDTree<cr>
+map <F10> :NERDTreeToggle<cr>
 
 " Buffer explorer invoke
 map <F12> :BufExplorer<cr>
